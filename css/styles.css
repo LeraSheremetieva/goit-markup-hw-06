@@ -283,7 +283,7 @@ a {
     left: 50%;
     transform: translate(-50%, -50%) scale(1);    
 
-    padding: 8px;
+    padding: 40px;
     width: 528px;
     height: 581px;
 
@@ -317,11 +317,134 @@ a {
     width: 18px;    
 }
 
-.modal-form {
+.modal-form {   
     display: flex;
     flex-direction: column;
+}
+
+.modal-form-box {
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;    
+}
+
+.modal-form-box:not(:last-child) {
+    margin-bottom: 10px;
+}
+
+.label {
+    margin-bottom: 4px;
+}
+.modal-label {
+    display: inline-block;
+    font-size: 12px;
+    line-height: 1.17;
+    letter-spacing: 0.01em;
+}
+
+.modal-form-case {
+    display: flex; 
+    margin-top: 10px;
+    margin-bottom: 30px;
+}
+
+.form-input {
+    display: block;
+    width: 100%;
+    padding: 11px 30px;
+    min-height: 40px;
+
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+}
+
+.textarea {
+    display: block;
+    resize: none;    
+    min-height: 120px;
+    width: 100%;
+    padding: 11px 12px;
     
-    margin: 40px;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+}
+
+
+.modal-title {
+    margin-bottom: 12px;
+
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 1.15;
+    text-align: center;
+    letter-spacing: 0.03em;
+
+color: #212121;
+}
+
+.form-box-icon {
+    position: relative;
+    width: 100%;
+}
+.form-icon {
+    position: absolute;
+    top: 11px;
+    left: 12px;
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.form-box-icon:focus-within .form-icon {
+    fill: var(--accent-color);
+}
+
+.form-checkbox {
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    border: 0;
+    padding: 0;
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    margin: -1px;
+}
+
+.checkbox-label {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    line-height: 1.7;
+    letter-spacing 0.03em;
+    color: #757575;
+}
+
+.checkbox-label::before {
+    content: "";
+    display: inline-block;
+    margin-right: 7px;
+    width: 15px;
+    height: 15px;
+
+    background-color: #fff;
+    border: 2px solid #212121;
+    border-radius: 4px;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);;
+}
+
+.form-checkbox:checked + .checkbox-label::before {
+    background-color: var(--accent-color);
+    background-image: url(../images/icon-check-two.svg);
+    background-size: contain;
+    background-origin: border-box;
+    border-color: transparent;
+}
+
+.form-link {
+    text-decoration: underline;    
+    color: var(--accent-color);
+    padding-left: 5px;
 }
 
 /* ---------------our advantage---------------- */
